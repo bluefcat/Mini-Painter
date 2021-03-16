@@ -1,6 +1,20 @@
 #include "pch.h"
 
+#include <assert.h>
 #include "Logger.h"
+
+Logger::Logger() {
+	char buffer[1024] = { 0, };
+	current_time(buffer, 1024);
+	std::string name(buffer);
+	
+	log_file = new std::ofstream(name.substr(0, name.find(" "))+".log", std::ios::app);
+	
+}
+
+Logger::~Logger() {
+	if(log_file != nullptr) delete log_file;
+}
 
 void Logger::set_format(const std::string& format) {
 	log_format = format;

@@ -16,11 +16,12 @@ protected:
 			%{datetime} [%{level}] %{func}(%{line}): %{message}
 			2021-03-16 02:22:30 [INFO] main(5): Hello, World!
 	*/
-	std::string log_format = "%{datetime} [%{level}] %{func}(%{line}): %{message}";
-	std::ifstream* log_file;
+	std::string log_format = "[%{datetime}] [%{level}]\t%{func}(%{line}): %{message}";
+	std::ofstream* log_file;
 
 public:
-	//Logger();
+	Logger();
+	~Logger();
 	virtual void set_format(const std::string&);
 	virtual void info(const std::string&, int, const std::string&) = 0;
 	virtual void warning(const std::string&, int, const std::string&) = 0;
