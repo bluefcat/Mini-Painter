@@ -1,5 +1,7 @@
 /.vs
 /Debug
 /Painter/*.vcxproj
+/Painter/*.filters
+/Painter/*.user
 /Painter/Debug
 *.sln
