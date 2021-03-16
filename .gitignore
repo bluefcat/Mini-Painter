@@ -1,4 +1,5 @@
-/.vs/*
+/.vs
+/Debug
 /Painter/*.vcxproj
-/Painter/Debug/*
+/Painter/Debug
 *.sln
