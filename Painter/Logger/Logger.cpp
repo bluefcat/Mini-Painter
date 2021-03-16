@@ -1,7 +1,7 @@
 #include "pch.h"
 
 #include <ctime>
-#include "Logger.h"
+#include "Logger/Logger.h"
 
 void Logger::set_format(const std::string& format) {
 	log_format = format;
