@@ -1,5 +1,5 @@
 #pragma once
-#include "Logger/Logger.h"
+#include "Logger.h"
 
 class ConsoleLogger : public Logger {
 public:

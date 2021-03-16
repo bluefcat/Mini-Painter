@@ -1,7 +1,7 @@
 #include "pch.h"
 
 #include <iostream>
-#include "Logger/ConsoleLogger.h"
+#include "ConsoleLogger.h"
 
 void ConsoleLogger::info(const std::string& func_name, int line, const std::string& message) {
 	std::cout << Logger::get_log("INFO", func_name, line, message) +"\n";
