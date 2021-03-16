@@ -12,7 +12,7 @@ protected:
 		%{message}: message
 
 		Example:
-			%{datetime} [%{level}]%{func}(%{line}): %{message}
+			%{datetime} [%{level}] %{func}(%{line}): %{message}
 			2021-03-16 02:22:30 [INFO] main(5): Hello, World!
 	*/
 	std::string log_format = "%{datetime} [%{level}] %{func}(%{line}): %{message}";
