@@ -5,3 +5,4 @@
 /Painter/*.user
 /Painter/Debug
 *.sln
+*.log
