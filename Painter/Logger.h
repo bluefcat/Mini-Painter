@@ -5,22 +5,24 @@ class Logger {
 protected:
 	/*
 		log_format's infomation 
-		%{datetime}: format for current time
-		%{message}: format for message
-		%{level}: format for log level
+		%{datetime}: current time
+		%{level}: log level
+		%{func} : function name
+		%{line} : line on function
+		%{message}: message
 
 		Example:
-			%{datetime}[%{level}]: %{message}
-			2021-03-16 02:22:30 [INFO]: Hello, World!
+			%{datetime} [%{level}]%{func}(%{line}): %{message}
+			2021-03-16 02:22:30 [INFO] main(5): Hello, World!
 	*/
-	std::string log_format = "%{datetime} [%{level}]: %{message}\n";
+	std::string log_format = "%{datetime} [%{level}] %{func}(%{line}): %{message}";
 
 public:
 	virtual void set_format(const std::string&);
-	virtual void info(const std::string&) = 0;
-	virtual void waring(const std::string&) = 0;
-	virtual void error(const std::string&) = 0;
+	virtual void info(const std::string&, int, const std::string&) = 0;
+	virtual void waring(const std::string&, int, const std::string&) = 0;
+	virtual void error(const std::string&, int, const std::string&) = 0;
 
 protected:
-	std::string get_log(const std::string&, const std::string&);
+	std::string get_log(const std::string&, const std::string&, int, const std::string&);
 };

@@ -4,11 +4,12 @@
 int main()
 {
 	ConsoleLogger logger;
-	logger.info("strat program");
+	logger.info(FUNC, LINE, "strat program");
     std::cout << "Hello World!\n"; 
-	logger.info("end program");
+	std::cout << FUNC << "(" << LINE << ")\n";
+	logger.info(FUNC, LINE, "end program");
 
-	logger.waring("test waring");
-	logger.error("test error");
+	logger.waring(FUNC, LINE, "test waring");
+	logger.error(FUNC, LINE, "test error");
 	return 0;
 }
