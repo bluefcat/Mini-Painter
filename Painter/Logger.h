@@ -20,7 +20,7 @@ protected:
 public:
 	virtual void set_format(const std::string&);
 	virtual void info(const std::string&, int, const std::string&) = 0;
-	virtual void waring(const std::string&, int, const std::string&) = 0;
+	virtual void warning(const std::string&, int, const std::string&) = 0;
 	virtual void error(const std::string&, int, const std::string&) = 0;
 
 protected:

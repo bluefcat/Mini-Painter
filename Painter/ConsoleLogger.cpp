@@ -8,7 +8,7 @@ void ConsoleLogger::info(const std::string& func_name, int line, const std::stri
 	return;
 }
 
-void ConsoleLogger::waring(const std::string& func_name, int line, const std::string& message) {
+void ConsoleLogger::warning(const std::string& func_name, int line, const std::string& message) {
 	std::cout << Logger::get_log("WARING", func_name, line, message) + "\n";
 	return;
 }

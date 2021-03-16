@@ -9,12 +9,12 @@ void DebugLogger::info(const std::string& func_name, int line, const std::string
 	return;
 }
 
-void DebugLogger::waring(const std::string& func_name, int line, const std::string& message) {
-	OutputDebugStringA((Logger::get_log("INFO", func_name, line, message) + "\n").c_str());
+void DebugLogger::warning(const std::string& func_name, int line, const std::string& message) {
+	OutputDebugStringA((Logger::get_log("WRANING", func_name, line, message) + "\n").c_str());
 	return;
 }
 
 void DebugLogger::error(const std::string& func_name, int line, const std::string& message) {
-	OutputDebugStringA((Logger::get_log("INFO", func_name, line, message) + "\n").c_str());
+	OutputDebugStringA((Logger::get_log("ERROR", func_name, line, message) + "\n").c_str());
 	return;
 }
