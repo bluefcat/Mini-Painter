@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <fstream>
 
 class Logger {
 protected:
@@ -16,8 +17,10 @@ protected:
 			2021-03-16 02:22:30 [INFO] main(5): Hello, World!
 	*/
 	std::string log_format = "%{datetime} [%{level}] %{func}(%{line}): %{message}";
+	std::ifstream* log_file;
 
 public:
+	//Logger();
 	virtual void set_format(const std::string&);
 	virtual void info(const std::string&, int, const std::string&) = 0;
 	virtual void warning(const std::string&, int, const std::string&) = 0;
